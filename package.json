@@ -1,0 +1,45 @@
+{
+  "name": "xuwu-ui",
+  "private": false,
+  "version": "1.1.6",
+  "type": "module",
+  "main": "xuwu-ui/xuwu-ui.es.js",
+  "module": "xuwu-ui/xuwu-ui.es.js",
+  "unpkg": "xuwu-ui/xuwu-ui.umd.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lib": "vite build --target lib --name xuwu-ui --dest lib ./packages/index.js && vite build:css",
+    "build:css": "sass ./theme-chalk/index.scss ./lib/theme-chalk/index.css --no-source-map"
+  },
+  "files": [
+    "xuwu-ui",
+    "packages",
+    "theme-chalk"
+  ],
+  "exports": {
+    ".": {
+      "import": "./xuwu-ui/xuwu-ui.es.js",
+      "require": "./xuwu-ui/xuwu-ui.cjs.js",
+      "default": "./xuwu-ui/xuwu-ui.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "unplugin-vue-define-options": "^0.12.2",
+    "sass": "^1.54.5",
+    "sass-loader": "7.3.1",
+    "vite": "^3.1.0"
+  },
+  "keywords": [
+    "xuwu",
+    "vite",
+    "ui",
+    "vue"
+  ]
+}
